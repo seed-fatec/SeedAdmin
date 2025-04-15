@@ -2,20 +2,25 @@
 </script>
 
 <template>
-    <div class="flex flex-col items-center justify-center h-screen">
-        <div class="w-100 h-100 border-2 rounded-xl flex flex-col justify-center pl-6 pr-10">
-            <div class="flex flex-col text-xl mb-10"> 
-                <label> Login </label>
-                <input class="border-2"/>
+    <div class="flex flex-col items-center justify-center h-screen bg-primary">
+        <h1 class="text-4xl font-bold text-white justify-center flex gap-0.5 mb-10">
+            Se<span class="text-primary bg-white px-1 rounded">ed</span>    
+            <span class="text-sm flex items-end"> Admin </span>
+        </h1>
+
+        <div class="w-100 rounded-xl flex flex-col justify-center px-6 bg-white p-10 pb-6">
+            <div class="flex flex-col text-2xl mb-10"> 
+                <label> Email </label>
+                <input class="border p-2 rounded"/>
             </div>
 
-            <div class="flex flex-col text-xl"> 
+            <div class="flex flex-col text-2xl"> 
                 <label> Senha </label>
-                <input class="border-2"/>
+                <input class="border p-2 rounded"/>
             </div>
             
-            <div class="flex flex-col items-center border-2 p-2 rounded mt-20">
-                <button class="text-xl">
+            <div class="flex flex-col bg-primary rounded-lg mt-10 hover:scale-[1.01] transform transition ease-in-out active:scale-[.99]">
+                <button class="text-2xl text-white cursor-pointer w-full p-3">
                     Login
                 </button>
             </div>
