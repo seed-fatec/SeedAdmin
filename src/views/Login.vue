@@ -11,7 +11,7 @@
         <div class="w-100 rounded-xl flex flex-col justify-center px-6 bg-white p-10 pb-6">
             <div class="flex flex-col text-2xl mb-10"> 
                 <label> Email </label>
-                <input class="border p-2 rounded"/>
+                <input class="border p-2 rounded" placeholder="example@email.com"/>
             </div>
 
             <div class="flex flex-col text-2xl"> 
@@ -20,7 +20,7 @@
             </div>
             
             <div class="flex flex-col bg-primary rounded-lg mt-10 hover:scale-[1.01] transform transition ease-in-out active:scale-[.99]">
-                <button class="text-2xl text-white cursor-pointer w-full p-3">
+                <button class="text-2xl font-semibold text-white cursor-pointer w-full p-3">
                     Login
                 </button>
             </div>
