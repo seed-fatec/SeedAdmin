@@ -6,6 +6,7 @@
         <Sidebar />
         <div class="w-full flex flex-col items-center justify-center p-10">
             <div class="bg-neutral-50 w-full h-full rounded-4xl p-6">
+                <RouterView />
             </div>
         </div>
     </div>

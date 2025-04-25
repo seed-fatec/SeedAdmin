@@ -11,7 +11,7 @@ router.beforeEach((to, _from, next) => {
     const auth = useAuthStore()
   
     if (auth.token && (to.name === 'login')) {
-      return next({ name: 'professor' })
+      return next({ name: 'teachers' })
     }
   
     if (!auth.token && to.meta.requiresAuth) {

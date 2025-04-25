@@ -23,7 +23,8 @@ export const useApi = createFetch({
       toast.error(message)
 
       return ctx
-    },
+    }, 
+    immediate: false
   },
   fetchOptions: {
     mode: 'cors',

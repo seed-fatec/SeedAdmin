@@ -29,13 +29,13 @@ export const routes: RouteStyle[] = [
         meta: { requiresAuth: true },
         children: [
             {
-                path: '/professor',
-                name: 'professor',
+                path: '/teachers',
+                name: 'teachers',
                 component: () => import('~/views/Professores/ListProfessor.vue')
             },
             {
-                path: '/professor/form',
-                name: 'professor_form',
+                path: '/teacher/new',
+                name: 'teacher',
                 component: () => import('~/views/Professores/FormProfessor.vue')
             }
         ]

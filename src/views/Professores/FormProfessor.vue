@@ -2,7 +2,5 @@
 </script>
 
 <template> 
-    <div class="bg-primary"> 
-        <Sidebar />
-    </div>
+    
 </template>

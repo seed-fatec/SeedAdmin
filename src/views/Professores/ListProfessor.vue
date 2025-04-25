@@ -3,6 +3,6 @@
 
 <template>
     <div>
-        <BoxLayout />
+        
     </div>
 </template>
