@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 import { useUserStore } from '~/store/user'
 import defaultAvatar from '~/assets/avatar.jpg'
+import router from '~/router'
 
 const userStore = useUserStore()
 
@@ -10,6 +11,9 @@ execute()
 onMounted(() => {
 })
 
+const register = () => {
+    router.push({ name: 'teacher' })
+}
 </script>
 
 <template>
@@ -17,7 +21,10 @@ onMounted(() => {
         <!-- Botão de cadastro -->
         <div class="w-full flex p-6 justify-between items-center">
             <h1 class="text-4xl font-semibold "> Professores </h1>
-            <button class="bg-primary text-white text-xl rounded-xl p-4 w-64">Cadastrar</button>
+            <button 
+                class="bg-primary text-white text-xl rounded-xl p-4 w-64 cursor-pointer hover:scale-99 hover:bg-[#3f4ebf] transition-transform duration-200" 
+                @click="register">Cadastrar
+            </button>
         </div>
 
         <!-- Container com altura fixa e scroll vertical -->
