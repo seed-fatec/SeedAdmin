@@ -28,8 +28,18 @@ export const useUserStore = defineStore('User', {
       this.users = []
     },
 
-    getUserById(id: number): User | undefined {
-      return this.users.find(user => user.id === id)
+    getUserById(id: number): User {
+      const { data, error } = useApi(`/users/${id}`).get().json<User>()
+
+      if (error.value) {
+        throw new Error('Erro ao buscar usuário: ' + error.value.message)
+      }
+
+      if (!data.value) {
+        throw new Error('Usuário não encontrado')
+      }
+
+      return data.value
     }
   }
 })

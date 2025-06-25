@@ -23,7 +23,7 @@ const register = () => {
             <h1 class="text-4xl font-semibold "> Professores </h1>
             <button 
                 class="bg-primary text-white text-xl rounded-xl p-4 w-64 cursor-pointer hover:scale-99 hover:bg-[#3f4ebf] transition-transform duration-200" 
-                @click="register">Cadastrar
+                @click="register">Registrar
             </button>
         </div>
 
@@ -45,7 +45,7 @@ const register = () => {
                         <td colspan="3" class="py-4 text-red-600">{{ userStore.error }}</td>
                     </tr>
                     <tr v-for="user in data?.users.filter(u => u.role === 2)" :key="user.id"
-                        class="hover:bg-gray-200 transition-colors duration-200">
+                        class="hover:bg-gray-300 transition-colors duration-200">
                         <td>{{ user.id }}</td>
                         <td>{{ user.name }}</td>
                         <td class="flex justify-center">

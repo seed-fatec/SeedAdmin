@@ -37,7 +37,7 @@ export const routes: RouteStyle[] = [
                 path: '/teacher/new',
                 name: 'teacher',
                 component: () => import('~/views/Professores/FormProfessor.vue')
-            }
+            },
         ]
     }
 ]

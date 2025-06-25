@@ -6,9 +6,7 @@ import router from '~/router';
 const authStore = useAuthStore()
 
 async function handleLogout() {
-    const { execute } = authStore.logout()
-
-    await execute()
+    authStore.logout()
     router.push({ name: 'login' })
 }
 </script>
@@ -28,8 +26,8 @@ async function handleLogout() {
             </RouterLink>
         </div>
 
-        <div class="flex flex-col justify-center mt-auto p-1 rounded">
-            <button @click="handleLogout" class="flex gap-x-4">
+        <div class="flex flex-col justify-center mt-auto p-1 rounded hover:text-red-600">
+            <button @click="handleLogout" class="flex gap-x-1 cursor-pointer">
                 <Icon icon="material-symbols:logout-rounded" class="size-6" />
                 Logout
             </button> 

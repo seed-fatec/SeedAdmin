@@ -44,15 +44,15 @@ async function handleSubmit() {
             <div class="w-100 rounded-xl flex flex-col justify-center px-6 bg-white p-10 pb-6">
                 <div class="flex flex-col text-2xl mb-10"> 
                     <label> Email </label>
-                    <input v-model="credentials.email" type="email" name="email" class="border p-2 rounded" placeholder="example@email.com"/>
+                    <input v-model="credentials.email" type="email" name="email" class="border-2 border-gray-500 p-2 rounded" placeholder="example@email.com"/>
                 </div>
 
                 <div class="flex flex-col text-2xl"> 
                     <label> Senha </label>
-                    <input v-model="credentials.password" type="password" name="password" placeholder="*******" class="border p-2 rounded"/>
+                    <input v-model="credentials.password" type="password" name="password" placeholder="*******" class="border p-2 rounded border-2 border-gray-500"/>
                 </div>
 
-                <div class="flex flex-col bg-primary rounded-lg mt-10 hover:scale-[1.01] transform transition ease-in-out active:scale-[.99]">
+                <div class="flex flex-col bg-primary rounded-lg mt-10 hover:scale-99 hover:bg-[#3f4ebf] transition-transform duration-200">
                     <button type="submit" :disabled="isFetching" class="text-2xl font-semibold text-white cursor-pointer w-full p-3">
                         Login
                     </button>

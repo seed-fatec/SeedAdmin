@@ -8,15 +8,18 @@ interface State {
   success: boolean
 }
 
-export const useTeacherStore = defineStore('Teacher', {
+const useTeacherStore = defineStore('Teacher', {
   state: (): State => ({
     isLoading: false,
     error: null,
     success: false
   }),
-
+  
   actions: {
     registerTeacher(teacher: Teacher) {
+      console.log(teacher)
       return useApi('/teacher/register').post(teacher).json<Teacher>()
     }
 }})
+
+export { useTeacherStore }
