@@ -1,36 +1,42 @@
 <script setup lang="ts">
-import { useAuthStore } from '~/store/auth';
-import Icon from './Icon.vue';
-import router from '~/router';
+import { useAuthStore } from '~/store/auth'
+import { Icon } from '@iconify/vue'
+import router from '~/router'
 
 const authStore = useAuthStore()
 
 async function handleLogout() {
-    authStore.logout()
-    router.push({ name: 'login' })
+  authStore.logout()
+  router.push({ name: 'login' })
 }
 </script>
 
 <template>
-    <div class="h-screen w-70 bg-neutral-50 p-2 flex flex-col px-4">
-        <div class="h-30 flex flex-col justify-center">
-            <h1 class="text-4xl font-bold text-primary justify-center flex gap-0.5">
-                Se<span class="text-white bg-primary px-1 rounded">ed</span>    
-                <span class="text-sm flex items-end"> Admin </span>
-            </h1>
-        </div>
+  <div class="h-screen w-64 bg-white p-4 flex flex-col border-r border-gray-300 shadow-s">
+    <header class="pb-4 border-b border-gray-200 mb-4">
+      <h1 class="text-4xl font-bold text-primary justify-center flex gap-0.5">
+        Se<span class="text-white bg-primary px-1 rounded">ed</span>
+        <span class="text-sm flex items-end"> Admin </span>
+      </h1>
+    </header>
 
-        <div class=" flex flex-col text-lg pt-8">
-            <RouterLink :to="{name: 'teachers'}" class="rounded font-semibold text-center p-1 hover:bg-primary hover:text-white cursor-pointer transform transition ease-in-out"> 
-                Professores 
-            </RouterLink>
-        </div>
+    <h2 class="font-medium text-primary">Menu</h2>
+    <nav class="flex flex-col h-full">
+      <div class="menu">
+        <li>
+          <h2 class="font-medium text-primary">Professores</h2>
+          <ul>
+            <li>
+              <RouterLink :to="{ name: 'teachers' }"> Visualizar </RouterLink>
+            </li>
+          </ul>
+        </li>
+      </div>
 
-        <div class="flex flex-col justify-center mt-auto p-1 rounded hover:text-red-600">
-            <button @click="handleLogout" class="flex gap-x-1 cursor-pointer">
-                <Icon icon="material-symbols:logout-rounded" class="size-6" />
-                Logout
-            </button> 
-        </div>
-    </div>
+      <button @click="handleLogout" class="btn btn-error btn-outline mt-auto">
+        <Icon icon="lucide:log-out" class="size-5" />
+        Sair
+      </button>
+    </nav>
+  </div>
 </template>

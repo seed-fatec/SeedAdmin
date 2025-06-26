@@ -12,6 +12,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Sidebar: typeof import('./components/Sidebar.vue')['default']
+    TableSkeleton: typeof import('./components/loading/TableSkeleton.vue')['default']
     TeacherForm: typeof import('./components/TeacherForm.vue')['default']
   }
 }
