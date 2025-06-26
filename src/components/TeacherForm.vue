@@ -1,7 +1,6 @@
 <!-- components/TeacherForm.vue -->
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import router from '~/router'
+import { ref } from 'vue'
 
 const props = defineProps<{
   modelValue: {
