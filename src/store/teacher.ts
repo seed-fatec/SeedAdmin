@@ -12,14 +12,17 @@ const useTeacherStore = defineStore('Teacher', {
   state: (): State => ({
     isLoading: false,
     error: null,
-    success: false
+    success: false,
   }),
-  
+
   actions: {
     registerTeacher(teacher: Teacher) {
-      console.log(teacher)
       return useApi('/teacher/register').post(teacher).json<Teacher>()
-    }
-}})
+    },
+    fetchTeachers() {
+      return useApi('/teachers').get().json()
+    },
+  },
+})
 
 export { useTeacherStore }

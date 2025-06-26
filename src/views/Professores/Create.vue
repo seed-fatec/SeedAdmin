@@ -1,16 +1,14 @@
 <script setup lang="ts">
-
 import router from '~/router'
 import { ref } from 'vue'
 import { useTeacherStore } from '~/store/teacher'
 
 const teacherStore = useTeacherStore()
 
-// Dados do formulário
 const teacher = ref({
   name: '',
   email: '',
-  password: ''
+  password: '',
 })
 
 async function handleSubmit() {
@@ -23,10 +21,19 @@ async function handleSubmit() {
       console.error('Register failed: ', error)
     })
 }
+
+const goBack = () => {
+  router.back()
+}
 </script>
 
 <template>
-  <div>
-    <TeacherForm v-model="teacher" @submit="handleSubmit" />
-  </div>
+  <button class="flex items-center gap-2 link link-hover mb-4" @click="goBack">
+    <Icon icon="lucide:arrow-left" class="size-4" />
+    Voltar
+  </button>
+
+  <h1 class="text-2xl font-medium mb-4">Cadastrar Novo Professor</h1>
+
+  <TeacherForm v-model="teacher" @submit="handleSubmit" />
 </template>
